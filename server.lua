@@ -3,7 +3,6 @@ AddEventHandler("z12-darkweb:buy", function(data)
     local src = source
     local xPlayer = ESX.GetPlayerFromId(src)    
     local price = tonumber(data.Price) * data.Count
-    print(price)
     if xPlayer.getMoney() >= price  then
         xPlayer.removeMoney(price)
     xPlayer.addInventoryItem(data.Item, data.Count)
